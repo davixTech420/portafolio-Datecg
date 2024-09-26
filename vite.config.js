@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
+    base: 'https://portafolioda.up.railway.app/', 
     plugins: [
         laravel({
             input: [
@@ -14,6 +15,6 @@ export default defineConfig({
     ],
     build: {
         outDir: 'public/build',  
-        base: 'https://portafolioda.up.railway.app/',    
+        
     }, 
 });
