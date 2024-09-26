@@ -22,12 +22,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         if (config('app.env') === 'production') {
-            $scheme = request()->getScheme();
-            if ($scheme === 'http') {
-                URL::forceScheme('http');
-            } elseif ($scheme === 'https') {
+
                 URL::forceScheme('https');
-            }
+            
         }
 
         //
