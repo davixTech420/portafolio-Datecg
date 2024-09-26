@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+/* import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
@@ -8,17 +8,38 @@ export default defineConfig({
             input: [
                 'resources/sass/app.scss',
                 'resources/js/app.js',
-                /* 'resources/js/crm.js', */
             ],
             refresh: true,
-            https: true
+            https: true,
         }),
     ],
     build: {
-        base: 'https://portafolioda.up.railway.app/', 
+        base: './', 
         outDir: 'public/build',
         assetsDir: 'assets',  
     }, 
-
+S
     
+});
+ */
+import { defineConfig } from 'vite';
+import laravel from 'laravel-vite-plugin';
+
+export default defineConfig({
+  plugins: [
+    laravel({
+      // ... other configurations ...
+      host: 'portafolioda.up.railway.app',
+      https: true,
+      base: 'https://portafolioda.up.railway.app',
+    }),
+  ],
+  server: {
+    host: 'portafolioda.up.railway.app',
+    hmr: { host: 'portafolioda.up.railway.app' },
+  },
+  build: {
+    outDir: 'public/build',
+    assetsDir: 'assets',
+  },
 });
