@@ -12,8 +12,8 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-   /*  build: {
-        outDir: 'public',
-        base:'/public',       
-    }, */
+    build: {
+        outDir: 'public/build',  
+        base: 'https://portafolioda.up.railway.app/',    
+    }, 
 });
