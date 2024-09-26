@@ -13,6 +13,7 @@ export default defineConfig({
         }),
     ],
     build: {
-        base: 'https://portafolioda.up.railway.app/',        
+        outDir: 'public',
+        base: '/',        
     },
 });
