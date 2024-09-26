@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
-    base: 'https://portafolioda.up.railway.app/', 
+    base: 'https://portafolioda.up.railway.app/public/build/', 
     plugins: [
         laravel({
             input: [
