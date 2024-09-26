@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
-    base: 'https://portafolioda.up.railway.app/', 
+    
     plugins: [
         laravel({
             input: [
@@ -11,15 +11,14 @@ export default defineConfig({
                 /* 'resources/js/crm.js', */
             ],
             refresh: true,
+            https: true
         }),
     ],
     build: {
+        base: 'https://portafolioda.up.railway.app/', 
         outDir: 'public/build',
         assetsDir: 'assets',  
-        
     }, 
-    server: {
-        https: true,
-      },
+
     
 });
